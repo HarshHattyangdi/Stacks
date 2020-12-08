@@ -13,4 +13,4 @@ insertion and deletion occurs from one end(top).
 4. is_full : Returns true if stack is full.
 5. get_size : Returns the size of the stack.
 
-*** Strating this repo as a practice to learn github and Data Structures and Algorithms ***
+***Strating this repo as a practice to learn github and Data Structures and Algorithms***
