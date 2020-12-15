@@ -20,12 +20,18 @@
 */
 #include <stdio.h>
 #define SIZE 100
-int stack[SIZE];
-int top = -1;
+
+typedef struct Stack //Added a typedef (ADT) for stack leading to a more logically sound code
+{
+    int stk[SIZE];
+    int top;
+} Stack;
+
+Stack s;
 
 int is_full()
 {
-    if (top == SIZE)
+    if (s.top == SIZE - 1)
     {
         return 1;
     }
@@ -37,7 +43,7 @@ int push(int element)
 
     if (!is_full())
     {
-        stack[++top] = element;
+        s.stk[++s.top] = element;
     }
     else
     {
@@ -47,7 +53,7 @@ int push(int element)
 
 int is_empty()
 {
-    if (top == -1)
+    if (s.top == -1)
     {
         return 1;
     }
@@ -59,7 +65,7 @@ int pop()
     int element;
     if (!is_empty())
     {
-        element = stack[top--];
+        element = s.stk[s.top--];
         return element;
     }
     else
@@ -86,6 +92,7 @@ int convertToBinary(int number)
 int main()
 {
     int number;
+    s.top = -1; //initialize top to -1 as array indexing for stack start from 0
     printf("Enter a number :");
     scanf("%d", &number);
     convertToBinary(number);
