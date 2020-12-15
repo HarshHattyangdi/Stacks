@@ -16,7 +16,7 @@ Operations on a stack:
 #include <stdlib.h>
 #define SIZE 10
 
-typedef struct Stack
+typedef struct Stack //Added a typedef (ADT) for stack leading to a more logically sound code
 {
     int stk[SIZE];
     int top;
@@ -26,7 +26,7 @@ Stack s;
 
 int is_full()
 {
-    if (s.top == SIZE)
+    if (s.top == SIZE - 1)
     {
         return 1;
     }
@@ -47,7 +47,7 @@ int push(int value)
 
 int is_empty()
 {
-    if (top == -1)
+    if (s.top == -1)
     {
         return 1;
     }
@@ -60,7 +60,7 @@ int pop()
 
     if (!is_empty())
     {
-        value = stack[top--];
+        value = s.stk[s.top--];
         return value;
     }
     else
@@ -75,7 +75,7 @@ int stack_top()
     {
         printf("Stack is empty, no elements present");
     }
-    return stack[top];
+    return s.stk[s.top];
 }
 
 void display()
@@ -86,15 +86,15 @@ void display()
     {
         int i;
         printf("\nStack elements are:\n");
-        for (i = top; i >= 0; i--)
-            printf("%d\n", stack[i]);
+        for (i = s.top; i >= 0; i--)
+            printf("%d\n", s.stk[i]);
     }
 }
 
 int main()
 {
     int value, choice;
-
+    s.top = -1; //initialize top to -1 as array indexing for stack start from 0
     while (1)
     {
         printf("\n\n***** MENU *****\n");
@@ -104,9 +104,16 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("Enter the value to be inserted: ");
-            scanf("%d", &value);
-            push(value);
+            if (!is_full())
+            {
+                printf("Enter the value to be inserted: ");
+                scanf("%d", &value);
+                push(value);
+            }
+            else
+            {
+                printf("Stack is full, cannot push more elements");
+            }
             break;
         case 2:
             pop();
