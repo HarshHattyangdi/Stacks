@@ -12,17 +12,21 @@ Operations on a stack:
 4. is_full : Returns true if stack is full.
 5. get_size : Returns the size of the stack.
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 10
 
-int stack[SIZE];
-int top = -1; //initialize top to -1 as array indexing for stack start from 0
+typedef struct Stack
+{
+    int stk[SIZE];
+    int top;
+} Stack;
+
+Stack s;
 
 int is_full()
 {
-    if (top == SIZE)
+    if (s.top == SIZE)
     {
         return 1;
     }
@@ -33,7 +37,7 @@ int push(int value)
 {
     if (!is_full())
     {
-        stack[++top] = value; //value of top increases with every successful insertion
+        s.stk[++s.top] = value; //value of top increases with every successful insertion
     }
     else
     {
