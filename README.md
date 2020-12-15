@@ -13,4 +13,24 @@ insertion and deletion occurs from one end(top).
 4. is_full : Returns true if stack is full.
 5. get_size : Returns the size of the stack.
 
+## Updated on 15-12-20
+### Algorithm to convert to binary with stacks
+   1. Create a stack
+   2. Enter a decimal number which has to be converted into its equivalent binary form.
+   3. iteration1 (while number > 0)
+         3.1 digit = number % 2
+         3.2 Push digit into the stack
+         3.3 If the stack is full
+              3.3.1 Print an error
+              3.3.2 Stop the algorithm
+         3.4 End the if condition
+         3.5 Divide the number by 2
+   4. End iteration1
+   
+   5. iteration2 (while stack is not empty)
+         5.1 Pop digit from the stack
+         5.2 Print the digit
+   6. End iteration2
+   7. STOP
+
 ***Strating this repo as a practice to learn github and Data Structures and Algorithms***
