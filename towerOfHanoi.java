@@ -34,4 +34,27 @@ public class towerOfHanoi {
         stack.array = new int[capacity];
         return stack;
     }
+
+    boolean isFull(Stack stack) {
+        return (stack.top == stack.capacity - 1);
+    }
+
+    boolean isEmpty(Stack stack) {
+        return (stack.top == 1);
+    }
+
+    void push(Stack stack, int item) {
+        if (isFull(stack)) {
+            return;
+        }
+        stack.array[++stack.top] = item;
+    }
+
+    int pop(Stack stack) {
+        if (isEmpty(stack)) {
+            return Integer.MIN_VALUE;
+        }
+        return stack.array[stack.top--];
+    }
+
 }
