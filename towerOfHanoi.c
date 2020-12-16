@@ -15,3 +15,5 @@ struct Stack *createStack(unsigned capacity)
     stack->top = -1;
     stack->array = (int *)malloc(sizeof(int));
 };
+
+// inprogress.........
