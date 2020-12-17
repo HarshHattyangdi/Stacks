@@ -20,12 +20,41 @@
         </div>
     </header>
 
-    <article>
-        <div class="ui action input" id="create">
-            <input type="text" placeholder="Enter stack size">
-            <button class="ui button">Create</button>
+    <div class="ui placeholder segment">
+        <div class="ui two column very relaxed stackable grid">
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <div class="ui action input">
+                            <input type="text" placeholder="Enter stack size" name="capacity">
+                            <button class="ui button" onclick="window.alert('Create')">Create</button>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui action input">
+                            <input type="text" placeholder="Enter element">
+                            <button class="ui labled icon button" onclick="window.alert('Push')">
+                                <i class="angle double down icon"></i>
+                                Push
+                            </button>
+                        </div>
+                    </div>
+                    <div class="field" id="pop">
+                        <button class="ui labled icon button" onclick="window.alert('Pop')">
+                            <i class="angle double up icon"></i>
+                            Pop
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="middle aligned column">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt doloribus at pariatur explicabo tempora
+                veniam consectetur nulla! Ad ullam ab quam, ipsum esse eum iure accusantium nesciunt explicabo debitis
+                sed!
+            </div>
         </div>
-    </article>
+    </div>
+
 
     <!-- Jquery CDN minified -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -36,6 +65,8 @@
         crossorigin="anonymous"></script>
     <!-- Custom JS linking -->
     <script src="scripts/myscript.js"></script>
+    <!-- Fontawesome js -->
+    <script src="https://kit.fontawesome.com/d1b66db78f.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
