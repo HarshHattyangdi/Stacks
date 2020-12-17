@@ -1,0 +1,13 @@
+#head{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+#pop{
+    width: 100%;
+}
+button{
+    width: 40%;
+    height: 100%;
+}
+
