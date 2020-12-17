@@ -4,8 +4,8 @@
 
 ## Stacks ADT
 
-A linear data structure that can be thought of as a physical stack or a pile. 
-Works in LIFO order where things inserted at top are removed from the top itself first, i.e 
+A linear data structure that can be thought of as a physical stack or a pile.
+Works in LIFO order where things inserted at top are removed from the top itself first, i.e
 insertion and deletion occurs from one end(top).
 
 ## Operations on a stack
@@ -55,4 +55,3 @@ insertion and deletion occurs from one end(top).
     3. if i%3 == 0:
         legal movement top disk between auxiliary pole
         and destination pole
-
