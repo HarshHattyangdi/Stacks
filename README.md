@@ -42,7 +42,7 @@ insertion and deletion occurs from one end(top).
 
 ### Main algorithm to solve tower of hanoi problem using stacks
 
-1. Calculate the total number of moves required i.e. "pow(2, n)- 1" here n is number of disks.
+1. Calculate the total number of moves required i.e. "pow(2, n) - 1" here n is number of disks.
 2. If number of disks (i.e. n) is even then interchange destination
    pole and auxiliary pole.
 3. for i = 1 to total number of moves:
